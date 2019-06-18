@@ -43,6 +43,7 @@ class RoleInvite(BaseCog):
 
     def __init__(self, bot):
         self.bot = bot
+        self.bot.remove_command('inviteset')
 
         self.data = Config.get_conf(self, 260)
         self.data.register_guild(**self.def_guild)
